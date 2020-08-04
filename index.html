@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mahjong</title>
+
+  <style>
+    .tile {
+      float: left;
+      background-size: contain;
+      width: 52px;
+      height: 64px;
+      background-repeat: no-repeat;
+      background-position: left center;
+    }
+
+    [data-tile="白板"] {
+      background-image: url("tiles/白板.svg");
+    }
+
+    [data-tile="红中"] {
+      background-image: url("tiles/红中.svg");
+    }
+
+    [data-tile="青发"] {
+      background-image: url("tiles/青发.svg");
+    }
+  </style>
+</head>
+<body>
+<div>
+  <span class="tile" data-tile="白板"></span>
+  <span class="tile" data-tile="白板"></span>
+  <span class="tile" data-tile="白板"></span>
+  <span class="tile" data-tile="红中"></span>
+  <span class="tile" data-tile="红中"></span>
+  <span class="tile" data-tile="红中"></span>
+  <span class="tile" data-tile="青发"></span>
+  <span class="tile" data-tile="青发"></span>
+  <span class="tile" data-tile="青发"></span>
+</div>
+</body>
+</html>
