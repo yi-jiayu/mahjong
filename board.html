@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Mahjong</title>
+
+  <style>
+    .table {
+      display: grid;
+      grid-template-columns: auto 144px 546px 144px auto;
+      grid-template-rows: auto 144px 546px 144px auto;
+    }
+
+    .bottom {
+      grid-column-start: 3;
+      grid-row-start: 4;
+    }
+
+    .top {
+      grid-column-start: 3;
+      grid-row-start: 2;
+    }
+
+    .left {
+      display: flex;
+      grid-column-start: 2;
+      grid-row-start: 3;
+    }
+
+    .right {
+      display: flex;
+      grid-column-start: 4;
+      grid-row-start: 3;
+    }
+
+    .tile {
+      background-size: contain;
+      width: 39px;
+      height: 48px;
+      background-repeat: no-repeat;
+      background-position: left center;
+      background-image: url("tiles/back.svg");
+    }
+
+    .left .tile, .right .tile {
+      height: 39px;
+      width: 48px;
+      background-image: url("tiles/backh.svg");
+    }
+
+    .tile:hover {
+      opacity: 50%;
+    }
+
+    .rack {
+      display: flex;
+    }
+
+    .top .rack, .bottom .rack {
+      height: 48px
+    }
+
+    .left .rack, .right .rack {
+      width: 48px;
+    }
+
+    .top .rack {
+      flex-direction: row-reverse;
+    }
+
+    .left .rack {
+      flex-direction: column;
+    }
+
+    .right .rack {
+      flex-direction: column-reverse;
+    }
+
+  </style>
+</head>
+<body>
+<div class="table">
+  <div class="bottom">
+    <div class="rack">
+      <span class="tile"></span>
+    </div>
+    <div class="rack">
+      <span class="tile"></span>
+      <span class="tile"></span>
+    </div>
+    <div class="rack">
+      <span class="tile"></span>
+      <span class="tile"></span>
+      <span class="tile"></span>
+    </div>
+  </div>
+  <div class="left">
+    <div class="rack">
+      <span class="tile"></span>
+      <span class="tile"></span>
+      <span class="tile"></span>
+    </div>
+    <div class="rack">
+      <span class="tile"></span>
+      <span class="tile"></span>
+    </div>
+    <div class="rack">
+      <span class="tile"></span>
+    </div>
+  </div>
+  <div class="top">
+    <div class="rack">
+      <span class="tile"></span>
+      <span class="tile"></span>
+      <span class="tile"></span>
+    </div>
+    <div class="rack">
+      <span class="tile"></span>
+      <span class="tile"></span>
+    </div>
+    <div class="rack">
+      <span class="tile"></span>
+    </div>
+  </div>
+  <div class="right">
+    <div class="rack">
+      <span class="tile"></span>
+    </div>
+    <div class="rack">
+      <span class="tile"></span>
+      <span class="tile"></span>
+    </div>
+    <div class="rack">
+      <span class="tile"></span>
+      <span class="tile"></span>
+      <span class="tile"></span>
+    </div>
+  </div>
+</div>
+</body>
+</html>
